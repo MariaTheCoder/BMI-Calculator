@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script defer src="BMI.js"></script>
+    <style>
+        body {
+            font-family: sans-serif;
+        }
+
+        .underweight {
+            color: blue;
+        }
+        .healthy {
+            color: green;
+        }
+        .overweight {
+            color: yellow;
+            background-color: black;
+        }
+        .obese {
+            color: orange;
+            background-color: black;
+        }
+        .extremely-obese {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <h2>BMI Calculator</h2>
+    <p>
+        Ever wondered what your current BMI might be? Let's find out!<br>
+        You will need to:
+    </p>
+    <ul>
+        <li>Know your current weight</li>
+        <li>Measure your height</li>
+    </ul>
+    <p>Please select down below whether you would like to use the obviously superior metric unit system or the lame ass imperial unit system</p>
+    <select name="unit_system" id="unit_system">
+        <option value="metric">Metric</option>
+        <option value="imperial">Imperial</option>
+    </select><br><br>
+    <p style="font-weight: bold;">Height [m/in]</p><input id="height" type="number">
+    <p style="font-weight: bold;">Weight [kg/lbs]</p><input id="weight" type="number">
+    <br>
+    <br>
+    <br>
+    <button id="btn">Submit</button>
+    <div id="results"></div>
+    <br>
+    <br>
+    <p>Down below the BMI chart is shown.</p>
+    <img src="https://i.insider.com/57d291cadd0895c6308b46b0?width=800&format=jpeg&auto=webp" alt="BMI chart">
+</body>
+</html>
