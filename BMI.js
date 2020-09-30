@@ -1,8 +1,25 @@
 const button = document.getElementById("btn");
 const results = document.getElementById("results");
+const select = document.getElementById("unit_system");
+
+select.addEventListener(
+  "change",
+  function () {
+    let shownWeightUnit = document.getElementById("selected_weight_unit");
+    let shownHeightUnit = document.getElementById("selected_height_unit");
+
+    if (select.selectedIndex === 0) {
+      shownWeightUnit.innerText = " kg";
+      shownHeightUnit.innerText = " m";
+    } else {
+      shownWeightUnit.innerText = " lbs";
+      shownHeightUnit.innerText = " in";
+    }
+  },
+  false
+);
 
 button.addEventListener("click", function () {
-  const select = document.getElementById("unit_system");
   const input_weight = document.getElementById("weight").value;
   const input_height = document.getElementById("height").value;
   results.innerHTML = "";
