@@ -5,33 +5,67 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>BMI Calculator</title>
     <script defer src="BMI.js"></script>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <h2>BMI Calculator</h2>
     <p>
-      Ever wondered what your current BMI might be? Let's find out!<br />
-      You will need to:
+      The
+      <a href="https://en.wikipedia.org/wiki/Body_mass_index" target="blank"
+        >Body Mass Index</a
+      >
+      (<span style="font-style: italic">BMI</span> for short) is a value often
+      used to determine a person's physical health by considering a person's
+      weight in relation to height. By calculating and evaluating a BMI value,
+      it can be determined whether a person is underweight, of normal weight,
+      overweight, obese or extremely obese.
+      <br />
+      <br />
+      According to
+      <a
+        href="https://www.who.int/gho/ncd/risk_factors/bmi_text/en/"
+        target="_blank"
+        >World Health Organization</a
+      >
+      (<span style="font-style: italic">WHO</span>
+      for short) millions on people die each year worldwide as a direct result
+      of being overweight or obese. Body mass has a huge impact on a person's
+      long term health which is why the BMI value is a relevant way to indicate
+      a person's physical health.
+      <br />
+      <br />
+      The BMI value should ideally be inbetween 18 and 24 as this spectrum
+      suggests that a particular individual is of normal weight. This weight
+      category is ideal because it comes with fewer health risks. A BMI below 18
+      indicates a state of being underweight and above 24 is overweight if not
+      obese or extremely obese as further descripted below.
+      <br />
+      <br />
+      A BMI which is too height and therefore suggests that a person stores more
+      mass than is optimal for someone of their height comes with various health
+      risks such as
     </p>
     <ul>
-      <li>Know your current weight</li>
-      <li>Measure your height</li>
+      <li>High blood pressure</li>
+      <li>Type 2 diabetes</li>
+      <li>Stroke</li>
+      <li>Coronary heart disease</li>
     </ul>
     <p>
-      Please select down below whether you would like to use the obviously
-      superior metric unit system or the lame ass imperial unit system
+      Please select down below whether you would like to use the metric or imperial unit system.
     </p>
     <select name="unit_system" id="unit_system">
       <option value="metric">Metric</option>
       <option value="imperial">Imperial</option></select
     ><br /><br />
     <p id="height_tag">Height</p>
-    <input id="height" type="number"/>
+    <input id="height" type="number" />
     <p id="selected_height_unit"></p>
-    <br>
-    <br>
+    <br />
+    <br />
     <p id="weight_tag">Weight</p>
-    <input id="weight" type="number" /><p id="selected_weight_unit"></p>
+    <input id="weight" type="number" />
+    <p id="selected_weight_unit"></p>
     <br />
     <br />
     <br />
@@ -68,7 +102,8 @@
         past 40 is used for extreme obesity.
       </li>
     </ul>
-    <img id="img"
+    <img
+      id="img"
       src="https://i.insider.com/57d291cadd0895c6308b46b0?width=800&format=jpeg&auto=webp"
       alt="BMI chart"
     />
