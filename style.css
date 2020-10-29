@@ -4,6 +4,9 @@ body {
     margin-right: 20%;
     margin-bottom: 20mm;
 }
+h2 {
+    margin-bottom: -2mm;
+}
 h3 {
     margin-bottom: 2mm;
 }
