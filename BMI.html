@@ -35,15 +35,8 @@
       a person's physical health.
       <br />
       <br />
-      The BMI value should ideally be inbetween 18 and 24 as this spectrum
-      suggests that a particular individual is of normal weight. This weight
-      category is ideal because it comes with fewer health risks. A BMI below 18
-      indicates a state of being underweight and above 24 is overweight if not
-      obese or extremely obese as further descripted below.
-      <br />
-      <br />
-      A BMI which is too height and therefore suggests that a person stores more
-      mass than is optimal for someone of their height comes with various health
+      A BMI which is too hight and therefore suggests that a person stores more
+      mass than optimal for someone of their height comes with various health
       risks such as
     </p>
     <ul>
@@ -52,33 +45,21 @@
       <li>Stroke</li>
       <li>Coronary heart disease</li>
     </ul>
-    <p>
-      This document provides an opportunity to calculate a BMI value based on a
-      certain height and weight either by using the metric or imperial unit
-      system. For this calculator, the imperial unit system is chosen by
-      default. However, the user can select the imperial unit system in the
-      drop-down menu below.
-    </p>
-    <select name="unit_system" id="unit_system">
-      <option value="metric">Metric</option>
-      <option value="imperial">Imperial</option></select
-    ><br /><br />
-    <p id="height_tag">Height</p>
-    <input id="height" type="number" />
-    <p id="selected_height_unit"></p>
+    The BMI value should ideally be inbetween 18 and 24 as this spectrum
+    suggests that a particular individual is of normal weight. This weight
+    category is ideal because it comes with fewer health risks. A BMI below 18
+    indicates a state of being underweight and above 24 is overweight if not
+    obese or extremely obese.
     <br />
     <br />
-    <p id="weight_tag">Weight</p>
-    <input id="weight" type="number" />
-    <p id="selected_weight_unit"></p>
-    <br />
-    <br />
-    <br />
-    <button id="btn">Submit</button>
-    <div id="results"></div>
-    <br />
-    <br />
-    <p>Down below the BMI chart is shown.</p>
+    The BMI chart displayed below illustrates the relation between height and
+    weight and how. Assuming height is fixed, as weight decreases, so does the
+    BMI value and the BMI value increases as weight increases.
+    <img
+      id="img"
+      src="https://i.insider.com/57d291cadd0895c6308b46b0?width=800&format=jpeg&auto=webp"
+      alt="BMI chart"
+    />
     <ul style="list-style: circle">
       <li>
         In the BMI chart the color
@@ -107,10 +88,31 @@
         past 40 is used for extreme obesity.
       </li>
     </ul>
-    <img
-      id="img"
-      src="https://i.insider.com/57d291cadd0895c6308b46b0?width=800&format=jpeg&auto=webp"
-      alt="BMI chart"
-    />
+    <br>
+    <p>
+      This document provides an opportunity to calculate a more accurate BMI
+      value based on given known height and weight either by using the metric or
+      imperial unit system. For this calculator, the imperial unit system is
+      chosen by default. However, the user can select the imperial unit system
+      in the drop-down menu below.
+    </p>
+    <h3>Choose Unit System</h3>
+    <select name="unit_system" id="unit_system">
+      <option value="metric">Metric</option>
+      <option value="imperial">Imperial</option></select
+    ><br /><br />
+    <h3 id="height_tag">Height</h3>
+    <input id="height" type="number" />
+    <p id="selected_height_unit"></p>
+    <br />
+    <br />
+    <h3 id="weight_tag">Weight</h3>
+    <input id="weight" type="number" />
+    <p id="selected_weight_unit"></p>
+    <br />
+    <br />
+    <br />
+    <button id="btn">Submit</button>
+    <div id="results"></div>
   </body>
 </html>
