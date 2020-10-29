@@ -35,7 +35,7 @@ body {
 .extremely-obese {
     color: red;
 }
-#img {
+#img, #banner {
     max-width: 100%;
     height: auto;
 }
