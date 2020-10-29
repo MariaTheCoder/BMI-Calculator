@@ -24,8 +24,8 @@ select.addEventListener(
 );
 
 button.addEventListener("click", function () {
-  const input_weight = document.getElementById("weight").value;
-  const input_height = document.getElementById("height").value;
+  let input_weight = document.getElementById("weight").value;
+  let input_height = document.getElementById("height").value;
   results.innerHTML = "";
 
   let result = document.createElement("p");
