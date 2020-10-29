@@ -1,0 +1,48 @@
+body {
+    font-family: sans-serif;
+    margin-top: 15mm;
+    margin-left: 20mm;
+    margin-right: 20mm;
+}
+#weight_tag {
+    font-weight: bold;
+}
+#height_tag {
+    font-weight: bold;
+}
+#selected_weight_unit {
+    font-weight: bold; 
+    display: inline;
+}
+#selected_height_unit {
+    font-weight: bold;
+    display: inline;
+}
+.underweight {
+    color: blue;
+}
+.healthy {
+    color: green;
+}
+.overweight {
+    color: yellow;
+    background-color: black;
+}
+.obese {
+    color: orange;
+    background-color: black;
+}
+.extremely-obese {
+    color: red;
+}
+#img {
+    width: 100%;
+    height: auto;
+}
+
+@media only screen and (max-width: 600px) {
+    body {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+}

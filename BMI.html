@@ -5,28 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>BMI Calculator</title>
     <script defer src="BMI.js"></script>
-    <style>
-      body {
-        font-family: sans-serif;
-      }
-      .underweight {
-        color: blue;
-      }
-      .healthy {
-        color: green;
-      }
-      .overweight {
-        color: yellow;
-        background-color: black;
-      }
-      .obese {
-        color: orange;
-        background-color: black;
-      }
-      .extremely-obese {
-        color: red;
-      }
-    </style>
+    <link rel="stylesheet" href="style.css">
   </head>
   <body>
     <h2>BMI Calculator</h2>
@@ -46,13 +25,13 @@
       <option value="metric">Metric</option>
       <option value="imperial">Imperial</option></select
     ><br /><br />
-    <p style="font-weight: bold;">Height</p>
+    <p id="height_tag">Height</p>
     <input id="height" type="number"/>
-    <p id="selected_height_unit" style="font-weight: bold; display: inline;"></p>
+    <p id="selected_height_unit"></p>
     <br>
     <br>
-    <p style="font-weight: bold;">Weight</p>
-    <input id="weight" type="number" /><p id="selected_weight_unit" style="font-weight: bold; display: inline;"></p>
+    <p id="weight_tag">Weight</p>
+    <input id="weight" type="number" /><p id="selected_weight_unit"></p>
     <br />
     <br />
     <br />
@@ -89,7 +68,7 @@
         past 40 is used for extreme obesity.
       </li>
     </ul>
-    <img
+    <img id="img"
       src="https://i.insider.com/57d291cadd0895c6308b46b0?width=800&format=jpeg&auto=webp"
       alt="BMI chart"
     />
