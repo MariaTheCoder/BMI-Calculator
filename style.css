@@ -1,8 +1,8 @@
 body {
     font-family: sans-serif;
     margin-top: 15mm;
-    margin-left: 20mm;
-    margin-right: 20mm;
+    margin-left: 20%;
+    margin-right: 20%;
 }
 #weight_tag {
     font-weight: bold;
@@ -35,13 +35,13 @@ body {
 .extremely-obese {
     color: red;
 }
+#img {
+    max-width: 100%;
+    height: auto;
+}
 @media only screen and (max-width: 600px) {
     body {
         margin-left: 10px;
         margin-right: 10px;
-    }
-    #img {
-        width: 100%;
-        height: auto;
     }
 }
