@@ -2,6 +2,7 @@ const button = document.getElementById("btn");
 const results = document.getElementById("results");
 const select = document.getElementById("unit_system");
 
+/* The next four lines of code ensure that the metric unit system with its units are displayed as default chosen unit system for the BMI calculations */
 let shownWeightUnit = document.getElementById("selected_weight_unit");
 let shownHeightUnit = document.getElementById("selected_height_unit");
 
@@ -11,7 +12,6 @@ shownHeightUnit.innerText = " m";
 select.addEventListener(
   "change",
   function () {
-    
     if (select.selectedIndex === 0) {
       shownWeightUnit.innerText = " kg";
       shownHeightUnit.innerText = " m";
@@ -99,6 +99,8 @@ button.addEventListener("click", function () {
 
   results.appendChild(result);
 });
+
+/* The following two functions calculate a BMI value using either the metric unit system or the imperial unit system respectfully */
 
 function calculateBMI(input_height, input_weight, metric) {
   if (metric) return input_weight / (input_height * input_height);
