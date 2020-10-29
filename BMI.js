@@ -100,12 +100,14 @@ button.addEventListener("click", function () {
   results.appendChild(result);
 });
 
-/* The following two functions calculate a BMI value using either the metric unit system or the imperial unit system respectfully */
+/* The following function calculates a BMI value using either the metric unit system or the imperial unit system respectfully */
 
 function calculateBMI(input_height, input_weight, metric) {
   if (metric) return input_weight / (input_height * input_height);
   return (703 * input_weight) / (input_height * input_height);
 }
+
+/* The following function calculates is also formed by the BMI calculation formula. However, in this case, WEIGHT is calculated depending on a BMi value and a given height.  */
 
 function marginWeight(input_height, bmiValue, metric) {
   if (metric) return (bmiValue * (input_height * input_height)).toFixed(2);
