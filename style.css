@@ -35,14 +35,13 @@ body {
 .extremely-obese {
     color: red;
 }
-#img {
-    width: 100%;
-    height: auto;
-}
-
 @media only screen and (max-width: 600px) {
     body {
         margin-left: 10px;
         margin-right: 10px;
+    }
+    #img {
+        width: 100%;
+        height: auto;
     }
 }
