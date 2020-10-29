@@ -2,12 +2,16 @@ const button = document.getElementById("btn");
 const results = document.getElementById("results");
 const select = document.getElementById("unit_system");
 
+let shownWeightUnit = document.getElementById("selected_weight_unit");
+let shownHeightUnit = document.getElementById("selected_height_unit");
+
+shownWeightUnit.innerText = " kg";
+shownHeightUnit.innerText = " m";
+
 select.addEventListener(
   "change",
   function () {
-    let shownWeightUnit = document.getElementById("selected_weight_unit");
-    let shownHeightUnit = document.getElementById("selected_height_unit");
-
+    
     if (select.selectedIndex === 0) {
       shownWeightUnit.innerText = " kg";
       shownHeightUnit.innerText = " m";
