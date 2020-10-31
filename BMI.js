@@ -7,13 +7,19 @@ select.addEventListener(
   function () {
     let shownWeightUnit = document.getElementById("selected_weight_unit");
     let shownHeightUnit = document.getElementById("selected_height_unit");
+    let input_weight = document.getElementById("weight");
+    let input_height = document.getElementById("height");
 
     if (select.selectedIndex === 0) {
       shownWeightUnit.innerText = "kg";
       shownHeightUnit.innerText = "cm";
+      input_weight.value = (input_weight.value / 2.205).toFixed(2);
+      input_height.value = (input_height.value * 2.54).toFixed(2);
     } else {
       shownWeightUnit.innerText = "lbs";
       shownHeightUnit.innerText = "in";
+      input_weight.value = (input_weight.value * 2.205).toFixed(2);
+      input_height.value = (input_height.value / 2.54).toFixed(2);
     }
   },
   false
