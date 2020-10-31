@@ -2,24 +2,18 @@ const button = document.getElementById("btn");
 const results = document.getElementById("results");
 const select = document.getElementById("unit_system");
 
-/* The next four lines of code ensure that the metric unit system with its units are displayed as default chosen unit system for the BMI calculations */
-let shownWeightUnit = document.getElementById("selected_weight_unit");
-let shownHeightUnit = document.getElementById("selected_height_unit");
-
-shownWeightUnit.innerText = " kg";
-shownHeightUnit.innerText = " cm";
-
-/* When unit system is change, change the displayed units for input next to the input field*/
-
 select.addEventListener(
   "change",
   function () {
+    let shownWeightUnit = document.getElementById("selected_weight_unit");
+    let shownHeightUnit = document.getElementById("selected_height_unit");
+
     if (select.selectedIndex === 0) {
-      shownWeightUnit.innerText = " kg";
-      shownHeightUnit.innerText = " cm";
+      shownWeightUnit.innerText = "kg";
+      shownHeightUnit.innerText = "cm";
     } else {
-      shownWeightUnit.innerText = " lbs";
-      shownHeightUnit.innerText = " in";
+      shownWeightUnit.innerText = "lbs";
+      shownHeightUnit.innerText = "in";
     }
   },
   false
