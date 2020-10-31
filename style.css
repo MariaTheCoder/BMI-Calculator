@@ -19,10 +19,14 @@ h3 {
 #selected_weight_unit {
   font-weight: bold;
   display: inline;
+  font-size: 1.20rem;
+  padding: 0.75rem;
 }
 #selected_height_unit {
   font-weight: bold;
   display: inline;
+  font-size: 1.20rem;
+  padding: 0.75rem;
 }
 .input,
 .input:focus {
