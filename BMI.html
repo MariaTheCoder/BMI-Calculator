@@ -9,6 +9,36 @@
     <img id="banner" src="./images/banner.png" alt="healthcare_image" />
   </head>
   <body>
+    <h2>
+      Calculate BMI value
+    </h2>
+    <p>
+      This document provides an opportunity to calculate a more accurate BMI
+      value based on given known height and weight either by using the metric or
+      imperial unit system. For this calculator, the imperial unit system is
+      chosen by default. However, the user can select the imperial unit system
+      in the drop-down menu below.
+    </p>
+    <h3>Choose Unit System</h3>
+    <select name="unit_system" id="unit_system">
+      <option value="metric">Metric</option>
+      <option value="imperial">Imperial</option></select
+    ><br /><br />
+    <h3 id="height_tag">Height</h3>
+    <input id="height" type="number" />
+    <p id="selected_height_unit"></p>
+    <br />
+    <br />
+    <h3 id="weight_tag">Weight</h3>
+    <input id="weight" type="number" />
+    <p id="selected_weight_unit"></p>
+    <br />
+    <br />
+    <br />
+    <button id="btn">Submit</button>
+    <div id="results"></div>
+    <br>
+    <br>
     <h2>About BMI</h2>
     <p>
       The
@@ -88,34 +118,5 @@
         past 40 is used for extreme obesity.
       </li>
     </ul>
-    <br>
-    <h2>
-      Calculate BMI value
-    </h2>
-    <p>
-      This document provides an opportunity to calculate a more accurate BMI
-      value based on given known height and weight either by using the metric or
-      imperial unit system. For this calculator, the imperial unit system is
-      chosen by default. However, the user can select the imperial unit system
-      in the drop-down menu below.
-    </p>
-    <h3>Choose Unit System</h3>
-    <select name="unit_system" id="unit_system">
-      <option value="metric">Metric</option>
-      <option value="imperial">Imperial</option></select
-    ><br /><br />
-    <h3 id="height_tag">Height</h3>
-    <input id="height" type="number" />
-    <p id="selected_height_unit"></p>
-    <br />
-    <br />
-    <h3 id="weight_tag">Weight</h3>
-    <input id="weight" type="number" />
-    <p id="selected_weight_unit"></p>
-    <br />
-    <br />
-    <br />
-    <button id="btn">Submit</button>
-    <div id="results"></div>
   </body>
 </html>
