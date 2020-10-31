@@ -2,22 +2,18 @@ const button = document.getElementById("btn");
 const results = document.getElementById("results");
 const select = document.getElementById("unit_system");
 
-/* The next four lines of code ensure that the metric unit system with its units are displayed as default chosen unit system for the BMI calculations */
-let shownWeightUnit = document.getElementById("selected_weight_unit");
-let shownHeightUnit = document.getElementById("selected_height_unit");
-
-shownWeightUnit.innerText = " kg";
-shownHeightUnit.innerText = " cm";
-
 select.addEventListener(
   "change",
   function () {
+    let shownWeightUnit = document.getElementById("selected_weight_unit");
+    let shownHeightUnit = document.getElementById("selected_height_unit");
+
     if (select.selectedIndex === 0) {
-      shownWeightUnit.innerText = " kg";
-      shownHeightUnit.innerText = " cm";
+      shownWeightUnit.innerText = "kg";
+      shownHeightUnit.innerText = "cm";
     } else {
-      shownWeightUnit.innerText = " lbs";
-      shownHeightUnit.innerText = " in";
+      shownWeightUnit.innerText = "lbs";
+      shownHeightUnit.innerText = "in";
     }
   },
   false
@@ -103,13 +99,17 @@ button.addEventListener("click", function () {
 /* The following function calculates a BMI value using either the metric unit system or the imperial unit system respectfully */
 
 function calculateBMI(input_height, input_weight, metric) {
-  if (metric) return input_weight / ((input_height /100) * (input_height /100));
+  if (metric)
+    return input_weight / ((input_height / 100) * (input_height / 100));
   return (703 * input_weight) / (input_height * input_height);
 }
 
 /* The following function calculates is also formed by the BMI calculation formula. However, in this case, WEIGHT is calculated depending on a BMi value and a given height.  */
 
 function marginWeight(input_height, bmiValue, metric) {
-  if (metric) return (bmiValue * ((input_height/ 100) * (input_height/ 100))).toFixed(2);
+  if (metric)
+    return (bmiValue * ((input_height / 100) * (input_height / 100))).toFixed(
+      2
+    );
   return ((bmiValue * (input_height * input_height)) / 703).toFixed(2);
 }
