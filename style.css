@@ -32,11 +32,11 @@ h3 {
 }
 .overweight {
     color: yellow;
-    background-color: black;
+    background-color:gray;
 }
 .obese {
     color: orange;
-    background-color: black;
+    background-color:gray;
 }
 .extremely-obese {
     color: red;
