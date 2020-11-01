@@ -44,6 +44,12 @@ input[type="number"]::-webkit-outer-spin-button {
   appearance: none;
   margin: 0;
 }
+
+.btn-container {
+  display: flex;
+  justify-content: center;
+}
+
 .btns {
   padding: 15px 25px;
   font-size: 20px;
