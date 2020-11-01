@@ -41,9 +41,29 @@ h3 {
 .input[type="number"]::-webkit-inner-spin-button,
 input[type="number"]::-webkit-outer-spin-button {
   -webkit-appearance: none;
-  -moz-appearance: none;
   appearance: none;
   margin: 0;
+}
+.btns {
+  padding: 15px 25px;
+  font-size: 20px;
+  text-align: center;
+  cursor: pointer;
+  background-color: rgb(158, 199, 224);
+  border: none;
+  outline: none;
+  border-radius: 10px;
+  text-transform: lowercase;
+  font-style: italic;
+  box-shadow: 0 9px #999;
+}
+.btns:hover {
+  background-color: rgb(73, 170, 230);
+}
+.btns:active {
+  background-color: rgb(73, 170, 230);
+  box-shadow: 0 5px #999;
+  transform: translateY(4px);
 }
 .underweight {
   color: blue;
