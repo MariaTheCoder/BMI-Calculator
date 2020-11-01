@@ -9,6 +9,8 @@ let shownHeightUnit = document.getElementById("selected_height_unit");
 shownWeightUnit.innerText = " kg";
 shownHeightUnit.innerText = " cm";
 
+/* When unit system is change, change the displayed units for input next to the input field*/
+
 select.addEventListener(
   "change",
   function () {
@@ -23,12 +25,15 @@ select.addEventListener(
   false
 );
 
+/* Upon click, calculate the BMI value for the given input. However, if input is not valid, do not calculate and return alert request positive values for height and weight 
+Depending on the result of the BMI calculation, return statement explaining how many weight units the user is from the next weight category */
+
 button.addEventListener("click", function () {
   let input_weight = document.getElementById("weight").value;
   let input_height = document.getElementById("height").value;
   results.innerHTML = "";
 
-  if (validValues(input_height, input_weight) === false)
+  if (negativeInput(input_height, input_weight) === false)
     return alert("Please insert positive values for weight and height");
 
   let result = document.createElement("p");
@@ -123,6 +128,6 @@ function marginWeight(input_height, bmiValue, metric) {
 
 /* Check for valid values for height and weight in input fields */
 
-function validValues(input_height, input_weight) {
+function negativeInput(input_height, input_weight) {
   if (input_height < 1 || input_weight < 1) return false;
 }
