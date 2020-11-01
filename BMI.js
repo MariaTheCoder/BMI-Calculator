@@ -43,9 +43,8 @@ button.addEventListener("click", function () {
 
   if (BMI >= 40) {
     result.innerText =
-      BMI +
-      " " +
-      "Extremely obese. \nYou are " +
+    "Your BMI is " + BMI +
+      ", which means that you are extremely obese.\nYou are " +
       (input_weight - marginWeight(input_height, 40, metric)).toFixed(2) +
       " " +
       weightUnit +
@@ -53,9 +52,8 @@ button.addEventListener("click", function () {
     result.classList.add("extremely-obese");
   } else if (BMI < 40 && BMI >= 30) {
     result.innerText =
-      BMI +
-      " " +
-      "Obese. \nYou are " +
+    "Your BMI is " + BMI +
+      ", which means that you are obese.\nYou are " +
       (marginWeight(input_height, 40, metric) - input_weight).toFixed(2) +
       " " +
       weightUnit +
@@ -67,9 +65,8 @@ button.addEventListener("click", function () {
     result.classList.add("obese");
   } else if (BMI < 30 && BMI >= 25) {
     result.innerText =
-      BMI +
-      " " +
-      "Overweight \nYou are " +
+    "Your BMI is " + BMI +
+      ", which means that you are overweight.\nYou are " +
       (marginWeight(input_height, 30, metric) - input_weight).toFixed(2) +
       " " +
       weightUnit +
@@ -81,9 +78,8 @@ button.addEventListener("click", function () {
     result.classList.add("overweight");
   } else if (BMI < 25 && BMI >= 18) {
     result.innerText =
-      BMI +
-      " " +
-      "Healthy. \nYou are " +
+      "Your BMI is " + BMI +
+      ", which means that you are at a healthy weight.\nYou are " +
       (marginWeight(input_height, 25, metric) - input_weight).toFixed(2) +
       " " +
       weightUnit +
@@ -95,9 +91,8 @@ button.addEventListener("click", function () {
     result.classList.add("healthy");
   } else {
     result.innerText =
-      BMI +
-      " " +
-      "Underweight. \nYou need to gain " +
+    "Your BMI is " + BMI +
+      ", which means that you are underweight.\nYou need to gain " +
       (marginWeight(input_height, 18, metric) - input_weight).toFixed(2) +
       " " +
       weightUnit +
