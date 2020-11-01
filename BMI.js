@@ -28,6 +28,9 @@ button.addEventListener("click", function () {
   let input_height = document.getElementById("height").value;
   results.innerHTML = "";
 
+  if (validValues(input_height, input_weight) === false)
+    return alert("Please insert positive values for weight and height");
+
   let result = document.createElement("p");
   let metric = select.selectedIndex === 0;
   let BMI = calculateBMI(input_height, input_weight, metric).toFixed(2);
@@ -103,13 +106,23 @@ button.addEventListener("click", function () {
 /* The following function calculates a BMI value using either the metric unit system or the imperial unit system respectfully */
 
 function calculateBMI(input_height, input_weight, metric) {
-  if (metric) return input_weight / ((input_height /100) * (input_height /100));
+  if (metric)
+    return input_weight / ((input_height / 100) * (input_height / 100));
   return (703 * input_weight) / (input_height * input_height);
 }
 
 /* The following function calculates is also formed by the BMI calculation formula. However, in this case, WEIGHT is calculated depending on a BMi value and a given height.  */
 
 function marginWeight(input_height, bmiValue, metric) {
-  if (metric) return (bmiValue * ((input_height/ 100) * (input_height/ 100))).toFixed(2);
+  if (metric)
+    return (bmiValue * ((input_height / 100) * (input_height / 100))).toFixed(
+      2
+    );
   return ((bmiValue * (input_height * input_height)) / 703).toFixed(2);
+}
+
+/* Check for valid values for height and weight in input fields */
+
+function validValues(input_height, input_weight) {
+  if (input_height < 1 || input_weight < 1) return false;
 }
