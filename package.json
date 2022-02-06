@@ -1,0 +1,27 @@
+{
+  "name": "BMI-Calculator",
+  "version": "1.0.0",
+  "description": "This is a learning project.",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "jest": "^27.5.0"
+  },
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MariaTheCoder/BMI-Calculator.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MariaTheCoder/BMI-Calculator/issues"
+  },
+  "homepage": "https://github.com/MariaTheCoder/BMI-Calculator#readme"
+}
