@@ -1,11 +1,23 @@
-import selectUnits from "./selectUnits";
-
 const button = document.getElementById("btn");
 const results = document.getElementById("results");
+const select = document.getElementById("select_unit_system");
 
-document
-  .getElementById("select_unit_system")
-  .addEventListener("change", console.log("Click!"));
+select.addEventListener(
+  "change",
+  function () {
+    let shownWeightUnit = document.getElementById("selected_weight_unit");
+    let shownHeightUnit = document.getElementById("selected_height_unit");
+
+    if (select.selectedIndex === 0) {
+      shownWeightUnit.innerText = "kg";
+      shownHeightUnit.innerText = "cm";
+    } else {
+      shownWeightUnit.innerText = "lbs";
+      shownHeightUnit.innerText = "in";
+    }
+  },
+  false
+);
 
 /* Upon click, calculate the BMI value for the given input. However, if input is not valid, do not calculate and return alert request positive values for height and weight 
 Depending on the result of the BMI calculation, return statement explaining how many weight units the user is from the next weight category */

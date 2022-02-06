@@ -1,14 +1,15 @@
 function selectUnits() {
-  let shownWeightUnit = document.getElementById("selected_weight_unit");
-  let shownHeightUnit = document.getElementById("selected_height_unit");
+  // if (document.getElementById("select_unit_system").selectedIndex === 0) {
+  //   document.getElementById("selected_weight_unit").innerText = "kg";
+  //   document.getElementById("selected_height_unit").innerText = "cm";
+  //   return 1;
+  // } else {
+  //   document.getElementById("selected_weight_unit").innerText = "lbs";
+  //   document.getElementById("selected_height_unit").innerText = "in";
+  //   return 0;
+  // }
 
-  if (select.selectedIndex === 0) {
-    shownWeightUnit.innerText = "kg";
-    shownHeightUnit.innerText = "cm";
-  } else {
-    shownWeightUnit.innerText = "lbs";
-    shownHeightUnit.innerText = "in";
-  }
+  return console.log("Do you see me?");
 }
 
 module.exports = selectUnits;
