@@ -8,8 +8,7 @@
   },
   "dependencies": {},
   "devDependencies": {
-    "cypress": "^9.4.1",
-    "jest": "^27.5.0"
+    "cypress": "^9.4.1"
   },
   "scripts": {
     "test": "test"
