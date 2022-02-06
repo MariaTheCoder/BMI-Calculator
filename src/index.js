@@ -1,23 +1,11 @@
+import selectUnits from "./selectUnits";
+
 const button = document.getElementById("btn");
 const results = document.getElementById("results");
-const select = document.getElementById("unit_system");
 
-select.addEventListener(
-  "change",
-  function () {
-    let shownWeightUnit = document.getElementById("selected_weight_unit");
-    let shownHeightUnit = document.getElementById("selected_height_unit");
-
-    if (select.selectedIndex === 0) {
-      shownWeightUnit.innerText = "kg";
-      shownHeightUnit.innerText = "cm";
-    } else {
-      shownWeightUnit.innerText = "lbs";
-      shownHeightUnit.innerText = "in";
-    }
-  },
-  false
-);
+document
+  .getElementById("select_unit_system")
+  .addEventListener("change", console.log("Click!"));
 
 /* Upon click, calculate the BMI value for the given input. However, if input is not valid, do not calculate and return alert request positive values for height and weight 
 Depending on the result of the BMI calculation, return statement explaining how many weight units the user is from the next weight category */
@@ -37,7 +25,8 @@ button.addEventListener("click", function () {
 
   if (BMI >= 40) {
     result.innerText =
-    "Your BMI is " + BMI +
+      "Your BMI is " +
+      BMI +
       ", which means that you are extremely obese.\nYou are " +
       (input_weight - marginWeight(input_height, 40, metric)).toFixed(2) +
       " " +
@@ -46,7 +35,8 @@ button.addEventListener("click", function () {
     result.classList.add("extremely-obese");
   } else if (BMI < 40 && BMI >= 30) {
     result.innerText =
-    "Your BMI is " + BMI +
+      "Your BMI is " +
+      BMI +
       ", which means that you are obese.\nYou are " +
       (marginWeight(input_height, 40, metric) - input_weight).toFixed(2) +
       " " +
@@ -59,7 +49,8 @@ button.addEventListener("click", function () {
     result.classList.add("obese");
   } else if (BMI < 30 && BMI >= 25) {
     result.innerText =
-    "Your BMI is " + BMI +
+      "Your BMI is " +
+      BMI +
       ", which means that you are overweight.\nYou are " +
       (marginWeight(input_height, 30, metric) - input_weight).toFixed(2) +
       " " +
@@ -72,7 +63,8 @@ button.addEventListener("click", function () {
     result.classList.add("overweight");
   } else if (BMI < 25 && BMI >= 18) {
     result.innerText =
-      "Your BMI is " + BMI +
+      "Your BMI is " +
+      BMI +
       ", which means that you are at a healthy weight.\nYou are " +
       (marginWeight(input_height, 25, metric) - input_weight).toFixed(2) +
       " " +
@@ -85,7 +77,8 @@ button.addEventListener("click", function () {
     result.classList.add("healthy");
   } else {
     result.innerText =
-    "Your BMI is " + BMI +
+      "Your BMI is " +
+      BMI +
       ", which means that you are underweight.\nYou need to gain " +
       (marginWeight(input_height, 18, metric) - input_weight).toFixed(2) +
       " " +
